@@ -1,0 +1,11 @@
+<%= @article.content %>
+
+<i class="fa-solid fa-trash"><%= link_to "Delete",
+  article_path(@article),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+</i>
+
+<i class="fa-solid fa-pen"><%= link_to "Edit", edit_article_path(@article) %></i>
+
+<%= link_to "Home",
+articles_path %>
